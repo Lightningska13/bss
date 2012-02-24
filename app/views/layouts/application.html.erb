@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= SITE_NAME if SITE_NAME %> :: <%= @page_title %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="logo">
+		</div><!--endlogo-->
+			<div id="mainNav">
+				<%= render "/layouts/main_nav" %>
+			</div><!--endmainNav-->
+
+<%= yield %>
+	</div><!--wrapper-->
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div id="eventListing">
+	<h1>Listing Users</h1>
+   <dl>
+   <% @users.each do |user| %>  
+    <dt><%=h user.name %> (<%= user.admin_level %>)
+    <%= link_to 'Edit', edit_user_path(user), :class => 'admin' %> <%= link_to 'Delete', user, :class => 'admin', :confirm => 'Are you sure?', :method => :delete %> 
+    </dt>
+    <dd>login name: <%=h user.login %></dd>    
+    <dd>last login: <%=h user.current_login_at.to_date.to_s(:long) if user.current_login_at? %></dd>    
+    <dd>login count: <%=h user.login_count %></dd>    
+   
+  <% end %>  
+  </dl>
+</div>
+<br />
+
+<%= link_to 'New User', new_user_path, :class=>'admin' %>

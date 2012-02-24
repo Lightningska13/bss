@@ -1,0 +1,22 @@
+<div id="mainContent">
+  <h2><%=h @event.title %></h2>
+<p class="list_date">
+  <%=h @event.start_date.strftime("%A %B %e, %Y") %>  <% if @event.event_type!='News' %><%=h  " - " + @event.end_date.strftime("%A %B %e, %Y") if @event.end_date != @event.start_date %><% end %>
+
+</p>
+
+<p>
+  <i><%= @event.blurb %></i>
+</p>
+
+<p>
+  <%== @event.description %>
+</p>
+
+<% if admin? %>
+<br />
+<%= link_to 'Edit', edit_event_path(@event), :class=>'admin' %> |
+<%= link_to 'Back', events_path(:t=>@event.event_type), :class=>'admin' %>
+<% end %>
+
+</div>

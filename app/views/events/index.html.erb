@@ -1,0 +1,23 @@
+<div id="mainContent">
+<div id="eventListing">
+<h1><%= @eventHeader %></h1>
+<% if admin? %>
+	<%= link_to 'New Event', new_event_path, :class => 'admin' %>
+<% end %>
+<% @event_months.each do |month, events| %>  
+ <h2 class="deptDivider"><%= month.strftime("%B %Y") %></h2>  
+   <dl>
+	<% events.each do |event| %>  
+    <dt <%="class='#{event.event_type}'"-%>><%= link_to event.title, event %> <br />
+		<span><%= event.start_date.to_date.to_s(:long) %></span></dt>
+    <dd><%=h event.blurb %></dd>
+      <% if admin? %> <br />
+				<dd><%= link_to	'Edit', edit_event_path(event), :class => 'admin' %>  |
+				<%= link_to 'Delete', event, :confirm => 'Are you sure?', :method => :delete, :class => 'admin'%>
+				</dd>
+			<% end %>
+  <% end %>  
+  </dl>
+<% end %> 
+</div>
+</div><!-- end maincontent -->

@@ -1,0 +1,29 @@
+<div id="contactContent">
+	<%= error_messages_for('contact_us', :header_message => "Your message could not be sent") %>
+
+<%= form_for(:contact_us, :url => contact_us_url, :html => { :class => 'contact' }) do |f| %>
+<div class="formSection" style="border:none;">
+  <fieldset>
+  <div class="input_block" style="float:left; margin-right:20px;">
+	<%= f.label :name %>
+    <%= f.text_field :name, :size=>"40" %>
+  </div>
+  <div class="input_block" style="float:left;">
+	<br />
+	<%= f.label :email %>
+    <%= f.text_field :email, :size=>"40" %>
+  </div>
+  </fieldset>
+  <fieldset>
+	<div class="input_block">
+	<%= f.label :message %>
+    <%= f.text_area :message, :rows => "7", :cols=>"60"%>
+  </div>
+  </fieldset>
+	<div class="submit">
+  <%= f.submit 'Submit' %>
+	</div>
+</div>
+<% end %>
+</div>
+<br />

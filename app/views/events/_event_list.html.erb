@@ -1,0 +1,10 @@
+<% if @events.any? %>
+<dl>
+	<% @events.each do |event| %>  
+ <dt <%="class='#{event.event_type}'"-%>><%= link_to event.title, event %> <br />
+		<span><%= event.start_date.to_date.to_s(:long) %></span></dt>
+ <dd><%=h event.blurb %></dd>
+<br />
+<% end %>
+</dl>
+<% end %>
