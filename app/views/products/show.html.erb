@@ -1,0 +1,25 @@
+<div id="boxLeft">
+  <h2><%=h @product.name %></h2>
+<p class="list_date">
+
+</p>
+<p>
+   <% if @showpic %>
+		<%= image_tag @product.pic.url(:medium) %> <br />
+   <% end %>
+</p>
+<p>
+  <i><%= @product.price %></i>
+</p>
+
+<p>
+  <%== @product.description %>
+</p>
+
+<% if admin? %>
+<br />
+<%= link_to 'Edit', edit_product_path(@product), :class=>'admin' %> |
+<%= link_to 'Back', products_path, :class=>'admin' %>
+<% end %>
+
+</div>

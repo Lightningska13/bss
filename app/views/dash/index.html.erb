@@ -1,4 +1,60 @@
-<div id="mainContent">
-<h1>Welcome to Hodges Jewelers</h1>
-<p>This is the site for hodges Jewelers</p>
-</div><!--end mainContent-->
+<%- content_for(:fck) do -%>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("a#example1").fancybox({
+				'overlayShow'	: false,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic',
+			});
+
+		});
+	</script>
+	<script type="text/javascript">
+	function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	    return '<div id="tip7-title"><span><a href="javascript:;" onclick="$.fancybox.close();"></a></span>' + (title && title.length ? '<b>' + title + '</b>' : '' );
+	}
+		$(document).ready(function() {
+
+			$("a[rel=example_group]").fancybox({
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'titlePosition' 	: 'over',
+				'titleFormat'		: formatTitle
+			});
+		});
+	</script>
+<%- end -%>
+<section id="mainContent">
+	<%= image_tag '/assets/webbanner1.gif' %>
+	<h1 style="text-align: center;">Black Sails Studio provides simple, clean, efficient and dynamic web, print, and brand solutions.</h1>
+	<section class="leftBox">
+		<h1>Web Applications</h1>
+			<a rel="example_group" href="/assets/web1_b.gif" title="Custom, Dynamic Web Applications for your business"><img alt="" src="/assets/web1_s.gif" /></a>
+
+			<a rel="example_group" href="/assets/web2_b.gif" title="Custom Content You Update At Your Convenience"><img alt="" src="/assets/web2_s.gif" /></a>
+
+			<a rel="example_group" href="/assets/web3_b.gif" title="Forms, Email, and Other Assets To Interact With Clients"><img alt="" src="/assets/web3_s.gif" /></a>
+
+			<a rel="example_group" href="/assets/web4_b.gif" title="Custom Login, Database-Driven Solutions To Drive Business"><img class="last" alt="" src="/assets/web4_s.gif" /></a>
+	</section>
+	<section class="leftBox">
+		<h1>Print Solutions</h1>
+		<a rel="example_group" href="/assets/print1_b.gif" title="Educational, Informative, Enticing Brochures"><img alt="" src="/assets/print1_s.gif" /></a>
+
+		<a rel="example_group" href="/assets/print2_b.gif" title="Logo Creation Or Stylizing For Brand Recognition"><img alt="" src="/assets/print2_s.gif" /></a>
+
+		<a rel="example_group" href="/assets/print3_b.gif" title="Instructional, Pamphlets, and Multi-Page Pieces"><img alt="" src="/assets/print3_s.gif" /></a>
+
+		<a rel="example_group" href="/assets/print4_b.gif" title="Wedding Invitations, Placeholders, and Business Cards"><img class="last" alt="" src="/assets/print4_s.gif" /></a>
+	</section>
+	<section class="leftBox">
+		<h1>Brand Identities</h1>
+		<a rel="example_group" href="/assets/brand1_b.gif" title="Logos Fuse And Define Branding Elements"><img alt="" src="/assets/brand1_s.gif" /></a>
+
+		<a rel="example_group" href="/assets/brand2_b.gif" title="Align Web Assets With Print, Graphics, and Ad Materials"><img alt="" src="/assets/brand2_s.gif" /></a>
+
+		<a rel="example_group" href="/assets/brand3_b.gif" title="Forms, and Ads Further Develop Brand Identity"><img alt="" src="/assets/brand3_s.gif" /></a>
+
+		<a rel="example_group" href="/assets/brand4_b.gif" title="Brochures and Other Materials Complete Your Brand Objectives"><img class="last" alt="" src="/assets/brand4_s.gif" /></a>
+	</section>
+</section><!--end mainContent--><br clear="both"/>

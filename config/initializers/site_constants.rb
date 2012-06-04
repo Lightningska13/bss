@@ -1,9 +1,4 @@
-SITE_NAME = 'Hodges Jewelers'
-SITE_ADDRESS1 = '117 W Michigan Ave'
+SITE_NAME = 'Black Sails Studio'
+SITE_ADDRESS1 = '210 N Kalamazoo Ave'
 SITE_ADDRESS2 = ' Marshall, MI 49068'
-SITE_PHONE = '269.789.2345'
-
-SITE2_ADDRESS1 = '2804 W. Michigan Ave Suite 102 '
-SITE2_ADDRESS2 = ' Kalamazoo, MI 49006'
-SITE2_PHONE = '269.492.6595'
-SITE2_FAX = '269.492.6594'
+SITE_PHONE = '269.781.0689'

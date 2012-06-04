@@ -39,7 +39,7 @@ class EventsController < ApplicationController
    		mytype="event_type='Event'"
   		myorder='start_date asc'
 	    @page_title = "Events"
-	    @eventHeader="Event Calendar"
+	    @eventHeader="Showcase Calendar"
  		end
  		
 	 # @events = Event.find(:all, :order=>myorder, :conditions=>mytype + @mycondition)

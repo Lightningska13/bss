@@ -2,19 +2,28 @@
 <html>
 <head>
   <title><%= SITE_NAME if SITE_NAME %> :: <%= @page_title %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <%= yield(:fck) -%>
 </head>
 <body>
 	<div id="wrapper">
-		<div id="logo">
-		</div><!--endlogo-->
-			<div id="mainNav">
+		<header>
+			<link rel= "shortcut icon" href="/assets/bssinitials.gif"/>
+			<div id="logo">
+			</div><!--endlogo-->
+			<nav>
 				<%= render "/layouts/main_nav" %>
-			</div><!--endmainNav-->
-
-<%= yield %>
+			</nav>
+			<%= render "/layouts/admin_nav" if admin? %>
+				<p style="color: green; margin-left:190px;"><%= flash[:notice] %></p>
+		</header>
+		<%= yield %>
+		<footer>
+			Black Sails Studio | 210 N Kalamazoo Ave, Marshall MI 49068 | 269.781.0689
+		</footer><!--endfooter-->
 	</div><!--wrapper-->
 </body>
 </html>

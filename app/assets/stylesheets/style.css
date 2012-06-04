@@ -1,0 +1,9 @@
+html, body, div, ul {
+	margin: 0;
+	padding: 0;
+}
+
+a img {
+	padding: 2px;
+	margin: 10px 20px 10px 0;
+}

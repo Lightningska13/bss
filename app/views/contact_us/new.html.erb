@@ -1,29 +1,29 @@
-<div id="contactContent">
-	<%= error_messages_for('contact_us', :header_message => "Your message could not be sent") %>
-
+<section id="contactContent">
+	<h1>Contact Us</h1>
+		<p>We would love to discuss your web-based and graphical needs.</p>
+		<p>Please fill out the form below to get started:</p>
 <%= form_for(:contact_us, :url => contact_us_url, :html => { :class => 'contact' }) do |f| %>
-<div class="formSection" style="border:none;">
-  <fieldset>
-  <div class="input_block" style="float:left; margin-right:20px;">
-	<%= f.label :name %>
-    <%= f.text_field :name, :size=>"40" %>
-  </div>
-  <div class="input_block" style="float:left;">
+	<section class="formSection" style="border:none;">
+  	<fieldset>
+  	<section class="input_block" style="float:left;">
+		<%= f.label :name %>
+    	<%= f.text_field :name, :size=>"40" %>
+  	</section>
+  	<section class="input_block" style="float:left;">
 	<br />
-	<%= f.label :email %>
-    <%= f.text_field :email, :size=>"40" %>
-  </div>
+		<%= f.label :email %>
+    	<%= f.text_field :email, :size=>"40" %>
+  	</section>
   </fieldset>
   <fieldset>
-	<div class="input_block">
-	<%= f.label :message %>
-    <%= f.text_area :message, :rows => "7", :cols=>"60"%>
-  </div>
+	<section class="input_block">
+		<%= f.label :message %>
+    	<%= f.text_area :message, :rows => "7", :cols=>"60"%>
+  	</section>
   </fieldset>
-	<div class="submit">
-  <%= f.submit 'Submit' %>
-	</div>
-</div>
+	<section class="submit">
+  		<%= f.submit 'Submit' %>
+	</section>
+</section>
 <% end %>
-</div>
-<br />
+</section>

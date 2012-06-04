@@ -1,0 +1,22 @@
+<div id="boxLeft">
+<h1><%= @title_text %></h1>
+		<% if admin? %>
+	<%= link_to 'Create New Product', new_product_path, :class => 'admin' %>
+		<% end %>
+   <dl>
+	<%= paginate @products %>
+	<% @products.each do |product| %>  
+    <dt <%="class='#{product}'"-%>><%= link_to product.name, product %> <br /><br /></dt>
+	<%= link_to(product) do %>
+
+		<%= image_tag(check_pic(product), :border => 0, :alt => product.name) %><br />
+	<% end %>
+	<dd><%=h product.description %></dd>
+      <% if admin? %>
+				<dd><%= link_to	'Edit', edit_product_path(product), :class => 'admin' %>  |
+				<%= link_to 'Delete', product, :confirm => 'Are you sure?', :method => :delete, :class => 'admin'%>
+				</dd><br />
+			<% end %>
+  <% end %>  
+  </dl>
+</div><!-- end leftBox -->
